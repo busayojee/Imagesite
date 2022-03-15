@@ -167,6 +167,7 @@ body {
 .aboutus p:nth-child(2) {
     font-size: 1rem;
     margin-top: 0.8rem;
+    line-height: 1.6;
 }
 .aboutus .socials {
     display: inline-flex;
@@ -178,13 +179,17 @@ body {
     font-size: 1.2rem;
 }
 @media screen and (min-width: 768px) {
+    .about h3 {
+        font-size: 3rem;
+    }
     .about_content {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+        padding: 10px;
     }
     .about_img {
-        width: 40%;
+        width: 30%;
     }
     .about_img img {
         max-width: 100%;
@@ -193,5 +198,29 @@ body {
     }
     .aboutus {
         width: 60%;
+    }
+}
+@media screen and (min-width: 1096px) {
+    .about_img {
+        width: 28%;
+    }
+    .aboutus {
+        width: 50%;
+    }
+    .aboutus p:nth-child(1) {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    .aboutus p:nth-child(2) {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+    .aboutus .socials a {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 1450px) {
+    .about_img {
+        width: 25%;
     }
 }
