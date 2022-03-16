@@ -14,6 +14,7 @@ h3 {
     text-align: center;
     letter-spacing: 2px;
     text-shadow: 2px 2px #494949, 3px 3px #18cdca;
+    margin-top: 2rem;
 }
 .navigation {
     display: flex;
@@ -128,8 +129,8 @@ h3 {
     /* background-color: red; */
     border: 2px solid #18cdca;
     position: absolute;
-    right: 100px;
-    bottom: 100px;
+    right: 20px;
+    bottom: 20px;
     border-radius: 30px;
     height: 100px;
     width: 50px;
@@ -146,6 +147,10 @@ h3 {
     .main h2 {
         font-size: 4rem;
     }
+    .scroll_down {
+        right: 100px;
+        bottom: 100px;
+    }
 }
 @media screen and (min-width: 1024px) {
     .main h2 {
@@ -159,9 +164,9 @@ h3 {
 
 /* About us styling */
 
-.about {
+/* .about {
     margin-top: 2rem;
-}
+} */
 .about_img {
     margin-top: 2rem;
     display: flex;
@@ -173,6 +178,7 @@ h3 {
     max-width: 100%;
     height: 60vh;
     object-fit: contain;
+    border-radius: 6px;
 }
 .aboutus {
     padding: 1rem;
@@ -250,16 +256,29 @@ h3 {
 
 /* Tech and Tools styling */
 .tech_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2rem;
+    display: inline-grid;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: 80px 80px 80px;
+    gap: 0.8rem;
+    padding: 0.8rem;
 }
 .tools {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid #000;
+    border-radius: 4px;
+    background: #2e2d2d;
     padding: 0.7rem;
+    width: 80px;
+    height: 80px;
+    transition: all 0.3s ease;
+}
+.tools:hover {
+    background: #272727;
+    /* background: #2e2d2d; */
 }
 .tools img {
     width: 50px;
@@ -267,4 +286,61 @@ h3 {
 }
 .tools p {
     font-size: 0.6rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #18cdca;
+}
+@media screen and (min-width: 600px) {
+    .tech_container {
+        grid-template-columns: 80px 80px 80px 80px 80px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .tech_container {
+        grid-template-columns: 100px 100px 100px 100px 100px;
+        gap: 1rem;
+    }
+    .tools {
+        width: 100px;
+        height: 100px;
+    }
+    .tools img {
+        width: 55px;
+    }
+    .tools p {
+        font-size: 0.7rem;
+    }
+}
+@media screen and (min-width: 1096px) {
+    .tech_container {
+        grid-template-columns: 120px 120px 120px 120px 120px;
+        gap: 1.2rem;
+    }
+    .tools {
+        width: 120px;
+        height: 120px;
+    }
+    .tools img {
+        width: 65px;
+    }
+    .tools p {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (min-width: 1450px) {
+    .tech_container {
+        grid-template-columns: 150px 150px 150px 150px 150px;
+        gap: 1.4rem;
+    }
+    .tools {
+        width: 150px;
+        height: 150px;
+        border-radius: 6px;
+    }
+    .tools img {
+        width: 80px;
+    }
+    .tools p {
+        font-size: 1rem;
+    }
 }
