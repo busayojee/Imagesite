@@ -348,19 +348,42 @@ h3 {
 
 .works_wrapper {
     margin-top: 2rem;
+    display: inline-grid;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
 }
 .work_container {
-    background: url(/assets/profile.jpg);
-    width: 500px;
-    height: 300px;
+    width: 380px;
+    height: 250px;
     border-radius: 30px;
     border: 3px solid #fff;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 1.4rem;
+}
+.work_container:nth-child(1) {
+    background: url(/assets/project.png);
+}
+.work_container:nth-child(2) {
+    background: url(/assets/project.png);
+}
+.work_container:nth-child(3) {
+    background: url(/assets/project.png);
+}
+.work_container:nth-child(4) {
+    background: url(/assets/project.png);
 }
 .work_container p:nth-child(1) {
-    font-size: 20px;
+    font-size: 1rem;
     color: #18cdca;
     font-weight: 500;
+}
+.work_container p:nth-child(2) {
+    margin-top: 0.3rem;
+    font-size: 0.7rem;
 }
 .work_container a {
     color: #18cdca;
@@ -374,4 +397,29 @@ h3 {
     position: absolute;
     top: 1rem;
     right: 2.5rem;
+}
+@media screen and (min-width: 860px) {
+    .works_wrapper {
+        grid-template-columns: 380px 380px;
+        gap: 0 2rem;
+    }
+    .works_wrapper div:nth-child(even) {
+        margin-top: 2rem;
+    }
+}
+@media screen and (min-width: 1260px) {
+    .works_wrapper {
+        grid-template-columns: 400px 400px;
+    }
+    .work_container {
+        width: 400px;
+        height: 270px;
+    }
+    .work_container p:nth-child(1) {
+        font-size: 1.3rem;
+    }
+    .work_container p:nth-child(2) {
+        margin-top: 0.4rem;
+        font-size: 0.8rem;
+    }
 }
