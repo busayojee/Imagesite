@@ -357,3 +357,21 @@ h3 {
     border: 3px solid #fff;
     position: relative;
 }
+.work_container p:nth-child(1) {
+    font-size: 20px;
+    color: #18cdca;
+    font-weight: 500;
+}
+.work_container a {
+    color: #18cdca;
+}
+.fa-github {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.fa-external-link-alt {
+    position: absolute;
+    top: 1rem;
+    right: 2.5rem;
+}
