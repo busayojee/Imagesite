@@ -131,6 +131,7 @@ h3 {
 .scroll_down {
     /* background-color: red; */
     border: 2px solid #18cdca;
+    background: #18cdca;
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -141,10 +142,23 @@ h3 {
     justify-content: center;
     align-items: center;
     z-index: 1;
+    /* box-shadow: 0 0 10px #18cdca; */
+    animation: glow 2s ease-in-out infinite reverse;
+}
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #18cdca;
+    }
+    50% {
+        box-shadow: 0 0 14px #18cdca;
+    }
+    100% {
+        box-shadow: 0 0 5px #18cdca;
+    }
 }
 .scroll_down a {
     font-size: 2rem;
-    color: #18cdca;
+    color: #272727;
 }
 @media screen and (min-width: 768px) {
     .main h2 {
