@@ -17,7 +17,7 @@ h3 {
     text-align: center;
     letter-spacing: 4px;
     text-shadow: 2px 2px #494949, 3px 3px #18cdca;
-    margin-top: 2rem;
+    padding-top: 4rem;
 }
 .navigation {
     display: flex;
@@ -181,11 +181,8 @@ h3 {
 
 /* About us styling */
 
-/* .about {
-    margin-top: 2rem;
-} */
 .about_img {
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,7 +270,7 @@ h3 {
 
 /* Tech and Tools styling */
 .tech_container {
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: inline-grid;
     width: 100%;
     justify-content: center;
@@ -364,7 +361,7 @@ h3 {
 /* Project section styling */
 
 .works_wrapper {
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: inline-grid;
     width: 100%;
     justify-content: center;
@@ -449,7 +446,7 @@ h3 {
 
 /* Contact us styling */
 .form_wrapper {
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -504,17 +501,22 @@ textarea {
         font-size: 1rem;
     }
 }
+@media screen and (min-width: 800px) {
+    .form {
+        width: 600px;
+    }
+}
 
 /* Footer styling */
 .footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
     background: #272727;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     min-height: 400px;
     align-items: center;
-    margin-top: 2rem;
-    padding: 2rem 0;
     color: #18cdca;
 }
 .footer div:nth-child(2) ul li {
