@@ -7,3 +7,9 @@ function slideMenu() {
     burgerMenu.classList.toggle('switch_menu');
     navigation.classList.toggle('toogle_navigation');
 }
+
+AOS.init(
+    {
+        delay: 50,
+    }
+);

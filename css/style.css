@@ -29,6 +29,16 @@ h3 {
     top: 0;
     z-index: 5;
 }
+.brand img {
+    width: 140px;
+    height: 40px;
+}
+.brand p {
+    color: #18cdca;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
 .nav_list {
     display: flex;
 }
@@ -478,6 +488,8 @@ textarea {
     color: #18cdca;
 }
 .form .btn {
+    width: 40%;
+    align-self: center;
     cursor: pointer;
     transition: 0.2s linear;
     font-weight: 600;
@@ -518,6 +530,17 @@ textarea {
     min-height: 400px;
     align-items: center;
     color: #18cdca;
+}
+.footer div:nth-child(1) p:nth-child(1) {
+    color: #18cdca;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.footer div:nth-child(1) img {
+    width: 140px;
+    height: 40px;
 }
 .footer div:nth-child(2) ul li {
     list-style: none;
