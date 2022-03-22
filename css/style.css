@@ -98,14 +98,26 @@ h3 {
     transform: scaleY(1);
 }
 
+/* Scroll to top styling */
+.scroll-to-top {
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+.scroll-to-top a {
+    color: white;
+}
+
 /* Main styling */
 
 .main {
     background: url(/assets/portfolio-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
-    /* position: relative; */
     height: 92vh;
-    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: flex-start;
