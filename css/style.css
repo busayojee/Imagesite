@@ -97,7 +97,7 @@ h3 {
 .switch_menu .three {
     transform: rotate(-45deg) translate(6px, -8px);
 }
-.toogle_navigation {
+.toggle_navigation {
     transform: scaleY(1);
 }
 

@@ -6,7 +6,7 @@ burgerMenu.addEventListener('click', slideMenu);
 
 function slideMenu() {
     burgerMenu.classList.toggle('switch_menu');
-    navigation.classList.toggle('toogle_navigation');
+    navigation.classList.toggle('toggle_navigation');
 }
 
 /*Anaimate on scroll config */
