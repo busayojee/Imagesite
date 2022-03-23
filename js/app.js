@@ -1,3 +1,4 @@
+/* Navigation */
 let burgerMenu = document.querySelector('.burger_menu');
 let navigation = document.querySelector('.nav_list');
 
@@ -8,6 +9,7 @@ function slideMenu() {
     navigation.classList.toggle('toogle_navigation');
 }
 
+/*Anaimate on scroll config */
 AOS.init(
     {
         delay: 50,
