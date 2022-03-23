@@ -539,7 +539,7 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 400px;
+    min-height: 300px;
     align-items: center;
     color: #18cdca;
 }
@@ -554,18 +554,15 @@ textarea {
     width: 140px;
     height: 40px;
 }
-.footer div:nth-child(2) ul li {
-    list-style: none;
-}
 .footer a {
     color: #18cdca;
     text-decoration: none;
 }
-.footer div:nth-child(3) a {
+.footer div:nth-child(2) a {
     font-size: 2rem;
     margin-right: 8px;
 }
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 480px) {
     .footer {
         flex-direction: row;
         min-height: 200px;

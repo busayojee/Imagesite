@@ -5,39 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Portfolio Template</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>Title - Portfolio Template</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/aos.css">
     <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="assets/favicon.png">
 </head>
 
 <body>
+
+    <!-- Navigation -->
     <div class="navigation">
         <div class="brand">
-            <!-- switch between <img> tag and <p> tag for your brand name -->
+
+            <!-- Image Logo -->
             <a href="index.html">
                 <img src="./assets/logo-template.png" alt="Logo">
-                <!-- <p>The Brand</p> -->
             </a>
-        </div>
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a href="index.html">
+                <p>The Brand</p>
+            </a> -->
+        </div> <!-- End of logo section -->
         <div class="burger_menu">
             <div class="one"></div>
             <div class="two"></div>
             <div class="three"></div>
-        </div>
+        </div> <!-- End of burger-menu -->
         <ul class="nav_list">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#project">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
+        </ul> <!-- End of Nav list item-->
+    </div> <!-- End of navbar -->
 
-    <div class="scroll-to-top">
-        <a href="#home"><i class="far fa-caret-square-up"></i></a>
-    </div>
-
+    <!-- Header -->
     <div class="main" id="home">
         <div data-aos="fade-up">
             <p>I'm a</p>
@@ -48,8 +72,9 @@
         <div class="scroll_down">
             <a href="#about"><i class="fas fa-angle-double-down"></i></a>
         </div>
-    </div>
+    </div> <!-- End of header -->
 
+    <!-- About section -->
     <div class="about" id="about" data-aos="fade-up">
         <h3>About Me</h3>
         <div class="about_content">
@@ -66,11 +91,12 @@
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-dribbble"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div> <!-- End of social icons -->
+            </div> <!-- End of aboutus -->
+        </div> <!-- End of about content -->
+    </div> <!-- End of about section -->
 
+    <!-- Tech and Tools -->
     <div class="tech_tools" id="skills" data-aos="fade-up">
         <h3>Tech & Tools</h3>
         <div class="tech_container">
@@ -114,9 +140,10 @@
                 <img src="./assets/tech-assets/xd.png" alt="">
                 <p>Adobe XD</p>
             </div>
-        </div>
-    </div>
+        </div> <!-- End of tech container -->
+    </div> <!-- End of tech and tools section -->
 
+    <!-- Project -->
     <div class="works" id="project" data-aos="fade-up">
         <h3>Projects</h3>
         <div class="works_wrapper">
@@ -126,31 +153,32 @@
                 </p>
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fas fa-external-link-alt"></i></a>
-            </div>
+            </div> <!-- End of work container -->
             <div class="work_container">
                 <p>Project 2</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque libero ut cumque, corrupti illo omnis.
                 </p>
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fas fa-external-link-alt"></i></a>
-            </div>
+            </div> <!-- End of work container -->
             <div class="work_container">
                 <p>Project 3</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque libero ut cumque, corrupti illo omnis.
                 </p>
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fas fa-external-link-alt"></i></a>
-            </div>
+            </div> <!-- End of work container -->
             <div class="work_container">
                 <p>Project 4</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque libero ut cumque, corrupti illo omnis.
                 </p>
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-        </div>
-    </div>
+            </div> <!-- End of work container -->
+        </div> <!-- End of works wrapper -->
+    </div> <!-- End of Project section -->
 
+    <!-- Contact us -->
     <div class="contact" id="contact" data-aos="fade-up">
         <h3>Contact Us</h3>
         <div class="form_wrapper">
@@ -160,33 +188,26 @@
                 <input type="tel" name="" id="" placeholder="Contact">
                 <textarea name="" id="" rows="4" placeholder="Message"></textarea>
                 <input type="submit" class="btn" value="Submit">
-            </form>
-        </div>
-    </div>
+            </form> <!-- End of form -->
+        </div> <!-- End of form wrapper -->
+    </div> <!-- End of contact us section -->
 
+    <!-- Footer -->
     <div class="footer">
         <div>
             <a href="index.html">
                 <img src="./assets/logo-template.png" alt="">
-                <!-- <p>The Brand</p> -->
+                <!-- <a href="index.html"><p>The Brand</p></a> -->
             </a>
             <p>Copyright © 2022</p>
         </div>
         <div>
-            <ul>
-                <li><a href="">Services</a></li>
-                <li><a href="">Benefits</a></li>
-                <li><a href="">Features</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </div>
-        <div>
-            <a href=""><i class="fab fa-twitter"></i></a>
-            <a href=""><i class="fab fa-facebook-square"></i></a>
-            <a href=""><i class="fab fa-linkedin"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
+            <a href="#your-brand"><i class="fab fa-twitter"></i></a>
+            <a href="#your-brand"><i class="fab fa-facebook-square"></i></a>
+            <a href="#your-brand"><i class="fab fa-linkedin"></i></a>
+            <a href="#your-brand"><i class="fab fa-instagram"></i></a>
+        </div> <!--  -->
+    </div> <!-- End of footer section -->
 
     <script src="js/aos.js"></script>
     <script src="js/app.js"></script>
