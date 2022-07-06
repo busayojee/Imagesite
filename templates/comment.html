@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- Webpage Title -->
+    <title>Comment</title>
+
+    <!-- Styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/aos.css">
+    <link href="/static/css/fontawesome-all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="/static/assets/favicon.png">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <div class="brand">
+
+
+            <!-- Text Logo-->
+            <a href="/" class="text-link">
+                <p style="font-family: cursive;">Dami</p>
+            </a>
+        </div> <!-- End of logo section -->
+        <!-- Burger menu -->
+        <div class="burger_menu">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div> <!-- End of burger-menu -->
+        <ul class="nav_list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a class="active" href="/upload">Upload</a></li>
+            <li><a href="#project">Artwork</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul> <!-- End of Nav list item-->
+    </div> 
+    <h3>Comment</h3>
+    <!-- Comment form -->
+   <div class="upload-form"> 
+  
+  
+    <form action="/art/comment/{{arts.id}}" method="post" enctype="multipart/form-data">
+    Name: <br>
+        <input type="text" name="nickname"  placeholder="Not compulsory"><br>
+        Email:<br>
+        <input type="text" name="email" placeholder="Not compulsory"><br>
+        Comment:<br>
+        <textarea name="comment"rows="10" required ></textarea><br>
+        <input type="submit" value="Comment" class="btn">
+       
+    </form>
+  </div>
+  <!-- End of form -->
+  <!-- comments -->
+    <div class="about" style="height: 120px;" id="skills" data-aos="fade-up">
+      <h3 style="font-size: 24px;">comments</h3></div>
+   <!-- Project -->
+   <div class="works" data-aos="fade-up">
+  
+   
+    
+  <div>
+        
+          {%for comment in comments%}
+          <div class="comment">
+            {% if comment.com_name %}
+        
+           <p> <b>{{comment.com_name}}</b></p>
+           {% else %}
+           <p><b>Anonymous</b></p>
+           {% endif %}
+           <p style="font-size: 10px;"><i>added on {{comment.come_date}}</i></p>
+           {{comment.com_comment}}
+           <div>
+           <a class="delete" href="/comment/delete/{{comment.com_id}}">Delete</a></div> 
+        </div>
+        {% endfor %}
+         </div>
+ <!-- Footer -->
+ <div class="footer">
+  <div>
+      <a href="/">
+          <a href="/"><p>Dami</p></a>
+      </a>
+      <p>ALABI BUSAYO © 2022</p>
+  </div>
+  <div>
+    <a href="https://www.instagram.com/victoriaarewa5/"><i class="fab fa-instagram"></i></a>
+  </div> <!-- End of social media  -->
+</div> <!-- End of footer section -->
+
+<!-- Scripts -->
+<script src="/static/js/aos.js"></script> <!-- Animate on scroll library -->
+<script src="/static/js/app.js"></script> <!-- Custom scripts -->
+</body>
+
+</html>

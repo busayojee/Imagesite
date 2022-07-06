@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+   
+
+    <!-- Webpage Title -->
+    <title>Home</title>
+
+    <!-- Styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="static/css/aos.css">
+    <link href="static/css/fontawesome-all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="static/assets/favicon.png">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <div class="brand">
+            <!-- Text Logo-->
+            <a class="text-link" href="/">
+                <p style="font-family: cursive;">Dami</p>
+            </a>
+        </div> <!-- End of logo section -->
+        <div class="burger_menu">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div> <!-- End of burger-menu -->
+        <ul class="nav_list">
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/upload">Upload</a></li>
+            <li><a href="#project">Artwork</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul> <!-- End of Nav list item-->
+    </div> <!-- End of navbar -->
+
+    <!-- Header -->
+    <div class="main" id="home">
+        <div data-aos="fade-up">
+            <!-- <p>I'm a</p> -->
+            <div class="intro">
+                <h4 class="intro-h4" >Oluwadamilola Arewa is an artist, she specializes in the use of acrylic Paint.<br>  A good number of her paintings are inspired by her love for nature and the outside world. <p></p> <a href="/about" class="intro-a">Learn more</a></h4>
+            </div>
+        </div>
+        <div class="scroll_down">
+            <a href="#project"><i class="fas fa-angle-double-down"></i></a>
+        </div>
+    </div> <!-- End of header -->
+    <!--Artwork -->
+    <div class="tech_tools" id="skills" data-aos="fade-up">
+        <h3>Artworks and Drawings</h3>
+        
+    </div> <!-- End of tech and tools section -->
+   
+    <!-- Project -->
+    <div class="works" id="project" data-aos="fade-up">
+        
+       
+        
+      
+            <div class="container">
+              {%for image in images%}
+                <div class="gallery-container" onclick="location.href = '/art/{{image.id}}'">
+                  <div class="gallery-item">
+                    <div class="image">
+                      <img src="{{ url_for('static', filename='uploads/' + image.filename)}}" alt="nature">
+                    </div>
+                    <div class="text">{{image.name}}</div>
+                  </div>
+                </div>
+            {% endfor %}
+              </div>
+            </div> 
+             
+
+    <!-- Footer -->
+    <div class="footer">
+        <div>
+            <a href="/">
+             
+                <a href="/"><p>Dami</p></a>
+            </a>
+            <p>ALABI BUSAYO © 2022</p>
+        </div>
+        <div>
+            <a href="https://www.instagram.com/victoriaarewa5/"><i class="fab fa-instagram"></i></a>
+        </div> <!--  -->
+    </div> <!-- End of footer section -->
+
+    <!-- Scripts -->
+    <script src="static/js/aos.js"></script> <!-- Animate on scroll library -->
+    <script src="static/js/app.js"></script> <!-- Custom scripts -->
+</body>
+
+</html>

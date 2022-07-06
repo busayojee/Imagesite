@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+ 
+
+    <!-- Webpage Title -->
+    <title>Upload</title>
+
+    <!-- Styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="static/css/aos.css">
+    <link href="static/css/fontawesome-all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="static/assets/favicon.png">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <div class="brand">
+           <!-- Text Logo -->
+            <a href="/" class="text-link">
+                <p style="font-family: cursive;">Dami</p>
+            </a>
+        </div> <!-- End of logo section -->
+        <div class="burger_menu">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div> <!-- End of burger-menu -->
+        <ul class="nav_list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a class="active" href="/upload">Upload</a></li>
+            <li><a href="/#project">Artwork</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul> <!-- End of Nav list item-->
+    </div> 
+    <h3>Select a file to upload</h3>
+     
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li style="padding: 1.4rem;">{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+   <div class="upload-form"> 
+  
+  
+    <form action="/upload" method="post" enctype="multipart/form-data">
+    Image: <br>
+        <input type="file" name="file" required><br>
+        Title:<br>
+        <input type="text" name="name" required><br>
+        Caption:<br>
+        <textarea name="caption"rows="10" required></textarea><br>
+        <input type="submit" value="Upload" class="btn">
+       
+    </form>
+  </div>
+    <div class="tech_tools" style="height: 120px;" id="skills" data-aos="fade-up">
+      <h3 style="font-size: 24px;">Previous uploads</h3></div>
+   <!-- Project -->
+   <div class="works" data-aos="fade-up">
+    <div class="container">
+          {%for image in images%}
+            <div class="gallery-container" onclick="location.href = '/art/{{image.id}}'">
+              <div class="gallery-item">
+                <div class="image">
+                  <img src="{{ url_for('static', filename='uploads/' + image.filename)}}" alt="nature">
+                </div>
+                <div class="text">{{image.name}}</div>
+              </div>
+            </div>
+        {% endfor %}
+          </div>
+        </div> 
+ <!-- Footer -->
+ <div class="footer">
+  <div>
+      <a href="/">
+          <a href="/"><p>Dami</p></a>
+      </a>
+      <p>ALABI BUSAYO © 2022</p>
+  </div>
+  <div>
+    <a href="https://www.instagram.com/victoriaarewa5/"><i class="fab fa-instagram"></i></a>
+  </div> <!--  -->
+</div> <!-- End of footer section -->
+
+<!-- Scripts -->
+<script src="static/js/aos.js"></script> <!-- Animate on scroll library -->
+<script src="static/js/app.js"></script> <!-- Custom scripts -->
+</body>
+
+</html>
