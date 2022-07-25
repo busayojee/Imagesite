@@ -15,14 +15,14 @@ class Img(db.Model):
     filename = db.Column(db.String(20))
     name = db.Column(db.String(20), nullable=False, default = "N/A")
     caption = db.Column(db.Text, nullable = False, default = "No caption")
-    date_added = db.Column(db.DateTime, nullable = False, default = datetime.utcnow())
+    date_added = db.Column(db.DateTime, nullable = False, default = datetime.utcnow)
     comment = db.relationship('Comment')
 class Comment(db.Model):
     com_id  = db.Column(db.Integer, nullable=False, primary_key = True)
     com_name = db.Column(db.String(30), nullable=False, default = "N/A")
     email = db.Column(db.String(30), nullable=False, default = "N/A")
     com_comment = db.Column(db.Text, nullable = False, default ="No comment")
-    come_date = db.Column(db.DateTime, nullable=False, default = datetime.utcnow())
+    come_date = db.Column(db.DateTime, nullable=False, default = datetime.utcnow)
     id  = db.Column(db.Integer, db.ForeignKey('img.id'))
 
 # comments = Comment.query.all() 
