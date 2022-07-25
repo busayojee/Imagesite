@@ -8,7 +8,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'static/uploads/'
 app.secret_key = 'damiportfolio'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///dami.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://dbolyioszsfizc:00e25a2affd13a0b801645e95a5ee54510d4269822586e07619c3c0dbd281933@ec2-63-34-180-86.eu-west-1.compute.amazonaws.com:5432/d80gtnjgm17p84'
 db =  SQLAlchemy(app)
 class Img(db.Model):
     id = db.Column(db.Integer, nullable = False, primary_key = True)
